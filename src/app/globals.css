@@ -24,6 +24,8 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
+  opacity: 1;
+  transition: opacity 2.6s ease, filter 2.8s ease;
 }
 
 .cloud {
