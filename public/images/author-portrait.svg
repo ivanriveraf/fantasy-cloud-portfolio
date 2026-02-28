@@ -1,0 +1,41 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="720" y2="900">
+      <stop offset="0" stop-color="#25173E"/>
+      <stop offset="1" stop-color="#6A3E7F"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="130" y1="190" x2="585" y2="760">
+      <stop offset="0" stop-color="#2A1838"/>
+      <stop offset="1" stop-color="#120D20"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="230" y1="470" x2="500" y2="860">
+      <stop offset="0" stop-color="#57407A"/>
+      <stop offset="1" stop-color="#2A1B44"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" rx="36" fill="url(#bg)"/>
+  <circle cx="567" cy="168" r="60" fill="#F8E6A2" fill-opacity="0.8"/>
+  <circle cx="145" cy="130" r="5" fill="#FFE9B0"/>
+  <circle cx="210" cy="95" r="3" fill="#FFE9B0"/>
+  <circle cx="310" cy="142" r="4" fill="#FFE9B0"/>
+  <circle cx="565" cy="300" r="4" fill="#FFE9B0"/>
+  <circle cx="620" cy="358" r="3" fill="#FFE9B0"/>
+
+  <ellipse cx="360" cy="770" rx="190" ry="45" fill="#F1DCA0" fill-opacity="0.25"/>
+  <ellipse cx="360" cy="470" rx="220" ry="300" fill="url(#hair)"/>
+  <ellipse cx="360" cy="380" rx="125" ry="155" fill="#F6D8C5"/>
+
+  <ellipse cx="320" cy="376" rx="12" ry="8" fill="#3A2A40"/>
+  <ellipse cx="401" cy="376" rx="12" ry="8" fill="#3A2A40"/>
+  <path d="M328 432C344 450 377 450 393 432" stroke="#BA6D77" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M273 340C286 327 307 320 326 325" stroke="#2C1C39" stroke-width="7" stroke-linecap="round"/>
+  <path d="M392 325C410 320 432 327 447 340" stroke="#2C1C39" stroke-width="7" stroke-linecap="round"/>
+
+  <path d="M256 553C278 520 323 495 360 495C397 495 442 520 464 553L505 860H215L256 553Z" fill="url(#dress)"/>
+  <path d="M360 526L396 572L360 618L324 572L360 526Z" fill="#DFC98D" fill-opacity="0.9"/>
+
+  <path d="M120 760C170 710 248 710 298 760" stroke="#E8C77A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M422 760C472 710 550 710 600 760" stroke="#E8C77A" stroke-width="6" stroke-linecap="round"/>
+</svg>
