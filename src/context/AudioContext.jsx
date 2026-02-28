@@ -7,8 +7,8 @@ const AudioContext = createContext(null);
 export function AudioProvider({ children }) {
   const audioRef = useRef(null);
   const windRef = useRef(null);
-
   const [isPlaying, setIsPlaying] = useState(() => {
+    if (typeof window === "undefined") return false;
     return localStorage.getItem("musicEnabled") === "true";
   });
 
@@ -19,9 +19,16 @@ export function AudioProvider({ children }) {
 
     windRef.current = new Audio("/audio/wind.mp3");
     windRef.current.volume = 0.3;
+
+    return () => {
+      audioRef.current?.pause();
+      windRef.current?.pause();
+    };
   }, []);
 
   useEffect(() => {
+    if (!audioRef.current) return;
+
     if (isPlaying) {
       audioRef.current.play().catch(() => {});
       localStorage.setItem("musicEnabled", "true");
@@ -32,7 +39,7 @@ export function AudioProvider({ children }) {
   }, [isPlaying]);
 
   const toggleMusic = () => {
-    setIsPlaying(prev => !prev);
+    setIsPlaying((prev) => !prev);
   };
 
   const playWind = () => {
@@ -48,14 +55,6 @@ export function AudioProvider({ children }) {
     </AudioContext.Provider>
   );
 }
-
-const magicSound = new Audio("/sounds/magic.mp3");
-
-const playWind = () => {
-  const wind = new Audio("/sounds/wind.mp3");
-  wind.play();
-  magicSound.play();
-};
 
 export function useAudio() {
   return useContext(AudioContext);
