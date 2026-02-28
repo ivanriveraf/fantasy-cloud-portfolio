@@ -98,14 +98,16 @@ export default function Home() {
         <source src="/audio/ambient.mp3" type="audio/mpeg" />
       </audio>
 
-      <section className={`portal-screen ${entered ? "portal-opened" : ""}`}>
+      {!entered && (
+        <section className="portal-screen">
           <div className="cloud cloud-left" />
           <div className="cloud cloud-right" />
           <div className="mist-layer" />
-          <button onClick={handleEnter} className="enter-text" disabled={entered}>
+          <button onClick={handleEnter} className="enter-text">
             Entrar al mundo mágico
           </button>
         </section>
+      )}
 
       <div className="twinkle-layer" aria-hidden>
         {twinkles.map((twinkle) => (
